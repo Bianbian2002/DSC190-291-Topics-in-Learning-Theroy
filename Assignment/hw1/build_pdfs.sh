@@ -14,12 +14,12 @@ COMMON=(
   --resource-path=.
 )
 
-for name in theory discussion ai_report; do
+for name in repo theory discussion ai_report; do
   echo "Building ${name}.pdf ..."
   pandoc "${name}.md" -o "${name}.pdf" "${COMMON[@]}"
 done
 
-echo "Building hw1_writeup.pdf (theory + discussion + ai_report) ..."
-pandoc theory.md discussion.md ai_report.md -o hw1_writeup.pdf "${COMMON[@]}"
+echo "Building hw1_writeup.pdf (repo + theory + discussion + ai_report) ..."
+pandoc repo.md theory.md discussion.md ai_report.md -o hw1_writeup.pdf "${COMMON[@]}"
 
-echo "Done: theory.pdf discussion.pdf ai_report.pdf hw1_writeup.pdf"
+echo "Done: repo.pdf theory.pdf discussion.pdf ai_report.pdf hw1_writeup.pdf"
