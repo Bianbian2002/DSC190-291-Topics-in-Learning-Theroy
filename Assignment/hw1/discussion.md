@@ -59,7 +59,7 @@ With $\gamma = 0.2$ and $R = 1$, the theoretical bound is $R^2/\gamma^2 = 25$, i
 | 200 | 2.2 |
 | 500 | 2.0 |
 
-Mistakes stay well below the bound for all $d$. For $d = 1$ the count is near 1 (the Perceptron converges after one mistake on 1D data). For $d = 2$-50, adding random coordinates in the orthogonal directions injects slight noise into the weight vector, causing a small increase. For very large $d$ (100-500), each coordinate contributes magnitude $\sim 1/\sqrt{d}$, so the noise per coordinate shrinks and the Perceptron's updates become increasingly dominated by the $x_1$ component. The bound (and the actual count) are both **independent of $d$**, confirming the theorem.
+Mistakes stay well below the bound for all $d$. For $d = 1$ the count is near 1 (the Perceptron converges after one mistake on 1D data). For $d$ from 2 to 50, adding random coordinates in the orthogonal directions injects slight noise into the weight vector, causing a small increase. For very large $d$ (100-500), each coordinate contributes magnitude $\sim 1/\sqrt{d}$, so the noise per coordinate shrinks and the Perceptron's updates become increasingly dominated by the $x_1$ component. The bound (and the actual count) are both **independent of $d$**, confirming the theorem.
 
 ---
 

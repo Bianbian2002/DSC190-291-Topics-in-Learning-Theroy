@@ -2,7 +2,7 @@
 **DSC 190/291 — Assignment 1**  
 **Student: Zeyu Bian**
 
-Throughout: $ \mathcal{X} = [0,1] $, $ \mathcal{Y} = \{-1,+1\} $, and $ h_\theta(x) = \mathrm{sign}(x - \theta) $ with the convention $ \mathrm{sign}(z) = +1 $ for $ z \geq 0 $ and $ \mathrm{sign}(z) = -1 $ for $ z < 0 $.
+Throughout: $\mathcal{X} = [0,1]$, $\mathcal{Y} = \{-1,+1\}$, and $h_\theta(x) = \mathrm{sign}(x - \theta)$ with the convention $\mathrm{sign}(z) = +1$ for $z \geq 0$ and $\mathrm{sign}(z) = -1$ for $z < 0$.
 
 ---
 
@@ -10,30 +10,30 @@ Throughout: $ \mathcal{X} = [0,1] $, $ \mathcal{Y} = \{-1,+1\} $, and $ h_\theta
 
 ### Grid Construction
 
-For $ \Delta \in (0, 1] $, define the uniform grid
+For $\Delta \in (0, 1]$, define the uniform grid
 $$
 G = \left\{ \frac{k\Delta}{2} : k = 0, 1, \ldots, \left\lceil \frac{2}{\Delta} \right\rceil \right\} \cap [0,1].
 $$
-The spacing between consecutive points is $ \Delta/2 $, so every point in $[0,1]$ is within distance $ \Delta/2 $ of some grid point.
+The spacing between consecutive points is $\Delta/2$, so every point in $[0,1]$ is within distance $\Delta/2$ of some grid point.
 
-**Size of $ G $.**
+**Size of $G$.**
 $$
 |G| = \left\lceil \frac{2}{\Delta} \right\rceil + 1 \;\leq\; \frac{2}{\Delta} + 2 \;=\; O\!\left(\frac{1}{\Delta}\right).
 $$
 
 ### Consistency Proof
 
-**Claim.** For every $\Delta$-separated threshold-realizable sequence $((x_t, y_t))_{t=1}^T$ with true threshold $\theta^* \in [0,1]$, there exists $\tilde\theta \in G$ such that $ h_{\tilde\theta}(x_t) = y_t $ for all $t$.
+**Claim.** For every $\Delta$-separated threshold-realizable sequence $((x_t, y_t))_{t=1}^T$ with true threshold $\theta^* \in [0,1]$, there exists $\tilde\theta \in G$ such that $h_{\tilde\theta}(x_t) = y_t$ for all $t$.
 
-**Proof.** Since $G$ has spacing $\Delta/2$, there exists $\tilde\theta \in G$ with $ |\tilde\theta - \theta^*| \leq \Delta/2 $.
+**Proof.** Since $G$ has spacing $\Delta/2$, there exists $\tilde\theta \in G$ with $|\tilde\theta - \theta^*| \leq \Delta/2$.
 
-Fix any round $t$. By $\Delta$-separation, $ |x_t - \theta^*| \geq \Delta $. Consider two cases:
+Fix any round $t$. By $\Delta$-separation, $|x_t - \theta^*| \geq \Delta$. Consider two cases:
 
-- **Case 1: $ x_t \geq \theta^* + \Delta $.** Then $ h_{\theta^*}(x_t) = +1 $. Since $ \tilde\theta \leq \theta^* + \Delta/2 \leq x_t - \Delta/2 < x_t $, we have $ h_{\tilde\theta}(x_t) = \mathrm{sign}(x_t - \tilde\theta) = +1 $. ✓
+- **Case 1: $x_t \geq \theta^* + \Delta$.** Then $h_{\theta^*}(x_t) = +1$. Since $\tilde\theta \leq \theta^* + \Delta/2 \leq x_t - \Delta/2 < x_t$, we have $h_{\tilde\theta}(x_t) = \mathrm{sign}(x_t - \tilde\theta) = +1$. $\checkmark$
 
-- **Case 2: $ x_t \leq \theta^* - \Delta $.** Then $ h_{\theta^*}(x_t) = -1 $. Since $ \tilde\theta \geq \theta^* - \Delta/2 \geq x_t + \Delta/2 > x_t $, we have $ h_{\tilde\theta}(x_t) = \mathrm{sign}(x_t - \tilde\theta) = -1 $. ✓
+- **Case 2: $x_t \leq \theta^* - \Delta$.** Then $h_{\theta^*}(x_t) = -1$. Since $\tilde\theta \geq \theta^* - \Delta/2 \geq x_t + \Delta/2 > x_t$, we have $h_{\tilde\theta}(x_t) = \mathrm{sign}(x_t - \tilde\theta) = -1$. $\checkmark$
 
-In both cases $ h_{\tilde\theta}(x_t) = h_{\theta^*}(x_t) = y_t $, so $ h_{\tilde\theta} $ is consistent with the entire sequence. $\square$
+In both cases $h_{\tilde\theta}(x_t) = h_{\theta^*}(x_t) = y_t$, so $h_{\tilde\theta}$ is consistent with the entire sequence. $\square$
 
 ### Mistake Bound via Halving
 
@@ -60,7 +60,7 @@ $$
 
 ### Feature Map and Unit Separator
 
-Define $ \phi: [0,1] \to \mathbb{R}^2 $ by
+Define $\phi: [0,1] \to \mathbb{R}^2$ by
 $$
 \phi(x) = (x,\, 1).
 $$
@@ -68,7 +68,7 @@ For the true threshold $\theta^*$, define
 $$
 w^* = (1,\, -\theta^*) \in \mathbb{R}^2, \qquad u^* = \frac{w^*}{\|w^*\|} = \frac{(1, -\theta^*)}{\sqrt{1 + (\theta^*)^2}}.
 $$
-Then $ w^* \cdot \phi(x) = x - \theta^* $, so $ h_{\theta^*}(x) = \mathrm{sign}(w^* \cdot \phi(x)) = \mathrm{sign}(u^* \cdot \phi(x)) $.
+Then $w^* \cdot \phi(x) = x - \theta^*$, so $h_{\theta^*}(x) = \mathrm{sign}(w^* \cdot \phi(x)) = \mathrm{sign}(u^* \cdot \phi(x))$.
 
 ### Norm Bound
 
@@ -79,7 +79,7 @@ $$
 
 ### Margin Lower Bound
 
-For any example $(x_t, y_t)$ in the $\Delta$-separated sequence, $ y_t = \mathrm{sign}(x_t - \theta^*) $, so $ y_t(x_t - \theta^*) = |x_t - \theta^*| \geq \Delta $. Also $\theta^* \in [0,1]$ implies $ \sqrt{1+(\theta^*)^2} \leq \sqrt{2} $. Therefore
+For any example $(x_t, y_t)$ in the $\Delta$-separated sequence, $y_t = \mathrm{sign}(x_t - \theta^*)$, so $y_t(x_t - \theta^*) = |x_t - \theta^*| \geq \Delta$. Also $\theta^* \in [0,1]$ implies $\sqrt{1+(\theta^*)^2} \leq \sqrt{2}$. Therefore
 $$
 y_t \cdot (u^* \cdot \phi(x_t)) = \frac{y_t(x_t - \theta^*)}{\sqrt{1+(\theta^*)^2}} = \frac{|x_t - \theta^*|}{\sqrt{1+(\theta^*)^2}} \geq \frac{\Delta}{\sqrt{2}} =: \gamma.
 $$
@@ -96,7 +96,7 @@ $$
 - **Inner product:** $w_M \cdot u^* \geq M\gamma$ (each update adds $y_t(u^* \cdot \phi(x_t)) \geq \gamma$).
 - **Squared norm:** $\|w_M\|^2 \leq MR^2$ (each update adds at most $R^2$, since on a mistake $y_t(w \cdot \phi(x_t)) \leq 0$).
 
-By Cauchy–Schwarz: $ M\gamma \leq w_M \cdot u^* \leq \|w_M\| \leq R\sqrt{M} $, giving $ M \leq R^2/\gamma^2 $.
+By Cauchy–Schwarz: $M\gamma \leq w_M \cdot u^* \leq \|w_M\| \leq R\sqrt{M}$, giving $M \leq R^2/\gamma^2$.
 
 Applying to our setting:
 $$
@@ -120,7 +120,7 @@ The $\Delta$-separation condition **rules out these adversarial sequences**. Any
 | Halving (B.1) | $O(\log(1/\Delta))$ | Hypothesis counting |
 | Perceptron (B.2) | $O(1/\Delta^2)$ | Geometric margin |
 
-For small $\Delta$, $ \log(1/\Delta) \ll 1/\Delta^2 $, so the Halving bound is dramatically tighter.
+For small $\Delta$, $\log(1/\Delta) \ll 1/\Delta^2$, so the Halving bound is dramatically tighter.
 
 ### Why the Bounds Scale Differently
 

@@ -22,7 +22,9 @@ DSC190-291-Topics-in-Learning-Theroy/
 ├── READ.md
 └── Assignment/
     ├── hw_1.pdf
-    └── hw1/           ← code, plots, and report for Assignment 1
+    ├── hw1/           ← code, plots, and report for Assignment 1
+    ├── hw_2.pdf       ← handout for Assignment 2
+    └── hw2/           ← write-up, AI report, `build_pdfs.sh`, optional checks
 ```
 
 ## Assignment 1 (Due: April 10, 2026)
@@ -38,6 +40,17 @@ DSC190-291-Topics-in-Learning-Theroy/
 - **D (15 pts):** AI usage report (~half page)
 
 **Submission:** Single PDF on Gradescope + code pushed to GitHub repo.
+
+**PDF build:** Run `./Assignment/hw1/build_pdfs.sh` to produce `theory.pdf`, `discussion.pdf`, `ai_report.pdf`, and one combined **`hw1_writeup.pdf`** (theory + discussion + AI report in that order).
+
+## Assignment 2 (Due: April 17, 2026)
+
+**Parts:**
+- **A (40 pts):** Unions of two intervals on $\mathbb{R}$ — restriction patterns, exact growth $\Gamma_{\mathcal{H}_2}(n)$, VC dimension + Halving vs Sauer–Shelah, tightness example, AI audit.
+- **B (45 pts):** Quadratic thresholds — embedding bound $\mathrm{VCdim}\le 3$, explicit $\varphi$, exact patterns/growth/VC, Sauer comparison, AI audit.
+- **C (15 pts):** AI usage report (include workflow updates).
+
+**Artifacts:** `Assignment/hw2/theory.md`, `ai_report.md`, `verify_patterns.py`, `build_pdfs.sh`. Run `./Assignment/hw2/build_pdfs.sh` to produce `theory.pdf`, `ai_report.pdf`, and combined `hw2_writeup.pdf`.
 
 ## Coding Conventions
 
