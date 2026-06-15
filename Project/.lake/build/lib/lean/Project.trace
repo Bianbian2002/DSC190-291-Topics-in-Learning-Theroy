@@ -1,0 +1,33 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["76968f158551f093.olean"],
+  "m": false,
+  "i": "7c2c94af3cbf4d51.ilean",
+  "c": "69d03758093bfb69.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/Cli/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/batteries/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/Qq/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/aesop/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/importGraph/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/plausible/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/packages/mathlib/.lake/build/lib/lean:/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/build/lib/lean /Users/zeyu/.elan/toolchains/leanprover--lean4---v4.30.0/bin/lean /Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/Project.lean -o /Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/build/lib/lean/Project.olean -i /Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/build/lib/lean/Project.ilean -c /Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/build/ir/Project.c --setup /Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/.lake/build/ir/Project.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["Project:deps",
+   [["deps",
+     [["Project/Project:extraDep", [["@Project:extraDep", "00000000000006bb"]]],
+      ["imports",
+       [["Project.SauerShelah transitive imports (legacy)", "aea46d3303a9c723"],
+        ["Project.SauerShelah:importAllArts", "b044ff6229a6751e"]]]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.30.0, commit d024af099ca4bf2c86f649261ebf59565dc8c622",
+   "2f4703bb19086252"],
+  ["/Users/zeyu/Desktop/Courses/DSC190-291-Topics-in-Learning-Theroy/Project/Project.lean",
+   "6b2df03cedbf4b2e"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: Project", "6f25e9188811d755"],
+  ["Package.id?: (some Project)", "264312e6c45eec93"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "a58a3a8213bda57d"}
