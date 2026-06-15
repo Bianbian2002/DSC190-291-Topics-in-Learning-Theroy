@@ -1,0 +1,4 @@
+% Font setup for LuaLaTeX: Menlo for code, with a STIX Two Math fallback so the
+% mathematical-script glyph 𝒜 (U+1D49C) that appears in Lean code renders.
+\directlua{luaotfload.add_fallback("codefallback", {"STIX Two Math:mode=base;"})}
+\setmonofont{Menlo}[Scale=0.85, RawFeature={fallback=codefallback}]
